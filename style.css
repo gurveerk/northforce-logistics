@@ -64,6 +64,21 @@ section{
     border-radius:8px;
     font-weight:bold;
 }
+.hero-button{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    background:#ffffff;
+    color:#0F2744;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.hero-button:hover{
+    background:#dce6f4;
+}
 
 footer{
     background:#0F2744;
