@@ -46,10 +46,21 @@ body{
 /* HEADER */
 
 header{
-    background:#0F2744;
+    background:
+    linear-gradient(
+        rgba(15,39,68,.85),
+        rgba(15,39,68,.85)
+    ),
+    url("truck-background.jpg");
+
+    background-size:cover;
+    background-position:center;
+
     color:white;
+
     text-align:center;
-    padding:60px 20px 80px;
+
+    padding:80px 20px;
 }
 
 .logo{
