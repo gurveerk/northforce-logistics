@@ -13,6 +13,14 @@ body{
     line-height:1.6;
 }
 
+#careers .card{
+    border-top:5px solid #0F2744;
+}
+
+#careers ul{
+    margin-left:25px;
+    line-height:2;
+}
 /* NAVIGATION */
 
 .navbar{
