@@ -86,6 +86,12 @@ h1{
     line-height:1.7;
 }
 
+.company-name{
+    font-size:20px;
+    margin-top:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
 /* BUTTON */
 
 .hero-button{
