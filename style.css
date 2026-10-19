@@ -79,7 +79,48 @@ section{
 .hero-button:hover{
     background:#dce6f4;
 }
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
 
+.brand{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.nav-logo{
+    width:60px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+.hero{
+    padding:60px 20px 80px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero-text{
+    max-width:800px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.6;
+}
 footer{
     background:#0F2744;
     color:white;
