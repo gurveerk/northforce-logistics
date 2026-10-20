@@ -5,96 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Northforce Logistics Inc. | Freight transportation across Canada and the US</title>
 <meta name="description" content="Safety-focused, fully insured, cross-border freight carrier based in Regina, Saskatchewan. FTL, LTL, hot shot and long-haul service across Canada and the United States.">
-<link rel="icon" href="northforce-logo.png">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap">
-<style>
-:root{--navy:#0B2455;--navy2:#143272;--amber:#F5B301;--ink:#1f2937;--mute:#4b5563;--line:#d8dee9;--bg:#f4f6fa;--w:1120px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;font-family:'Barlow','Segoe UI',Arial,sans-serif;color:var(--ink);line-height:1.6;font-size:17px;background:#fff}
-h1,h2,h3{font-family:'Barlow Semi Condensed','Barlow',Arial,sans-serif;color:var(--navy);line-height:1.1;margin:0}
-a{color:var(--navy2)}
-:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
-.logo{width:96px;height:72px;overflow:hidden;flex:none;display:block}
-.logo img{width:104px;height:104px;max-width:none;margin:-14px 0 0 -4px;display:block}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap;justify-content:flex-end}
-nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:16px}
-nav a:hover{color:var(--navy2);text-decoration:underline}
-.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:600;text-decoration:none;font-size:17px;border:2px solid transparent;cursor:pointer;font-family:inherit}
-.btn.main{background:var(--amber);color:var(--navy)}
-.btn.main:hover{background:#ffc62e}
-.btn.ghost{border-color:#fff;color:#fff}
-.btn.ghost:hover{background:rgba(255,255,255,.12)}
-.btn.dark{background:var(--navy);color:#fff}
-.btn.dark:hover{background:var(--navy2)}
-.hero{background:var(--navy);color:#fff;position:relative;padding:88px 0 112px}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:44px;height:6px;background:repeating-linear-gradient(90deg,var(--amber) 0 54px,transparent 54px 108px)}
-.hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
-.hero h1{color:#fff;font-size:clamp(44px,6.5vw,78px);font-weight:700;letter-spacing:-.5px}
-.hero p.lead{font-size:20px;max-width:34em;color:#dbe4f7;margin:22px 0 32px}
-.cta{display:flex;gap:14px;flex-wrap:wrap}
-.facts{background:#fff;color:var(--ink);border-radius:10px;padding:26px 28px}
-.facts h2{font-size:24px;margin-bottom:6px}
-.facts dl{margin:12px 0 0}
-.facts div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--line)}
-.facts dt{color:var(--mute)}
-.facts dd{margin:0;font-weight:600;color:var(--navy);text-align:right}
-.facts a{display:inline-block;margin-top:14px;font-weight:600}
-section{padding:80px 0}
-section.alt{background:var(--bg)}
-.sec-head{max-width:40em;margin-bottom:40px}
-.sec-head h2{font-size:clamp(32px,4.4vw,46px);margin-bottom:12px}
-.sec-head p{margin:0;color:var(--mute);font-size:19px}
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
-.svc li{list-style:none;display:flex;gap:16px;padding:24px 0;border-top:2px solid var(--navy);align-items:flex-start}
-.svc{margin:0;padding:0}
-.svc svg{width:34px;height:34px;flex:none;stroke:var(--navy);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
-.svc strong{display:block;font-family:'Barlow Semi Condensed',Arial,sans-serif;font-size:22px;color:var(--navy);line-height:1.2}
-.svc span{color:var(--mute);font-size:16px}
-.two{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}
-.docs{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin:0 0 28px;padding:0}
-.docs li{list-style:none;padding:12px 0 12px 30px;border-bottom:1px solid var(--line);position:relative;font-weight:500}
-.docs li::before{content:"";position:absolute;left:2px;top:19px;width:14px;height:8px;border-left:3px solid var(--navy);border-bottom:3px solid var(--navy);transform:rotate(-45deg) scale(.9)}
-form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-form .full{grid-column:1/-1}
-label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;color:var(--navy)}
-input,select,textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid #9aa6bd;border-radius:6px;background:#fff;color:var(--ink)}
-textarea{min-height:96px;resize:vertical}
-.note{font-size:14px;color:var(--mute);margin:0}
-.careers{background:var(--navy);color:#fff}
-.careers h2,.careers h3{color:#fff}
-.careers .sec-head p{color:#dbe4f7}
-.perks{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px;padding:0}
-.perks li{list-style:none;border:1px solid #4a63a0;border-radius:99px;padding:8px 18px;font-weight:500}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:36px}
-.cols h3{font-size:24px;margin-bottom:10px}
-.cols ul{margin:0;padding-left:20px;color:#dbe4f7}
-.cols li{margin-bottom:6px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.contact h3{font-size:30px;margin-bottom:4px}
-.contact p{margin:4px 0}
-.contact .big{font-size:26px;font-weight:600;font-family:'Barlow Semi Condensed',Arial,sans-serif}
-footer{background:#081a3f;color:#c3cde4;padding:28px 0;font-size:15px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-@media(max-width:900px){
- .hero .wrap,.two,.contact{grid-template-columns:1fr;gap:36px}
- .svc,.cols{grid-template-columns:1fr 1fr}
- section{padding:60px 0}
- .hero{padding:56px 0 96px}
-}
-@media(max-width:620px){
- body{font-size:16px}
- .bar{flex-direction:column;align-items:flex-start;gap:0;padding:8px 0}
- nav ul{justify-content:flex-start;gap:6px 16px;padding-bottom:8px}
- .svc,.cols,.docs,form{grid-template-columns:1fr}
- form{padding:22px}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
