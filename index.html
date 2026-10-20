@@ -1,342 +1,246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northforce Logistics Inc.</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpeg" href="favicon.jpg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northforce Logistics Inc. | Freight transportation across Canada and the US</title>
+<meta name="description" content="Safety-focused, fully insured, cross-border freight carrier based in Regina, Saskatchewan. FTL, LTL, hot shot and long-haul service across Canada and the United States.">
+<link rel="icon" href="northforce-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap">
+<style>
+:root{--navy:#0B2455;--navy2:#143272;--amber:#F5B301;--ink:#1f2937;--mute:#4b5563;--line:#d8dee9;--bg:#f4f6fa;--w:1120px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:'Barlow','Segoe UI',Arial,sans-serif;color:var(--ink);line-height:1.6;font-size:17px;background:#fff}
+h1,h2,h3{font-family:'Barlow Semi Condensed','Barlow',Arial,sans-serif;color:var(--navy);line-height:1.1;margin:0}
+a{color:var(--navy2)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.logo{width:96px;height:72px;overflow:hidden;flex:none;display:block}
+.logo img{width:104px;height:104px;max-width:none;margin:-14px 0 0 -4px;display:block}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap;justify-content:flex-end}
+nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:16px}
+nav a:hover{color:var(--navy2);text-decoration:underline}
+.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:600;text-decoration:none;font-size:17px;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn.main{background:var(--amber);color:var(--navy)}
+.btn.main:hover{background:#ffc62e}
+.btn.ghost{border-color:#fff;color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.dark:hover{background:var(--navy2)}
+.hero{background:var(--navy);color:#fff;position:relative;padding:88px 0 112px}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:44px;height:6px;background:repeating-linear-gradient(90deg,var(--amber) 0 54px,transparent 54px 108px)}
+.hero .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(44px,6.5vw,78px);font-weight:700;letter-spacing:-.5px}
+.hero p.lead{font-size:20px;max-width:34em;color:#dbe4f7;margin:22px 0 32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.facts{background:#fff;color:var(--ink);border-radius:10px;padding:26px 28px}
+.facts h2{font-size:24px;margin-bottom:6px}
+.facts dl{margin:12px 0 0}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--line)}
+.facts dt{color:var(--mute)}
+.facts dd{margin:0;font-weight:600;color:var(--navy);text-align:right}
+.facts a{display:inline-block;margin-top:14px;font-weight:600}
+section{padding:80px 0}
+section.alt{background:var(--bg)}
+.sec-head{max-width:40em;margin-bottom:40px}
+.sec-head h2{font-size:clamp(32px,4.4vw,46px);margin-bottom:12px}
+.sec-head p{margin:0;color:var(--mute);font-size:19px}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
+.svc li{list-style:none;display:flex;gap:16px;padding:24px 0;border-top:2px solid var(--navy);align-items:flex-start}
+.svc{margin:0;padding:0}
+.svc svg{width:34px;height:34px;flex:none;stroke:var(--navy);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+.svc strong{display:block;font-family:'Barlow Semi Condensed',Arial,sans-serif;font-size:22px;color:var(--navy);line-height:1.2}
+.svc span{color:var(--mute);font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin:0 0 28px;padding:0}
+.docs li{list-style:none;padding:12px 0 12px 30px;border-bottom:1px solid var(--line);position:relative;font-weight:500}
+.docs li::before{content:"";position:absolute;left:2px;top:19px;width:14px;height:8px;border-left:3px solid var(--navy);border-bottom:3px solid var(--navy);transform:rotate(-45deg) scale(.9)}
+form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .full{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;color:var(--navy)}
+input,select,textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid #9aa6bd;border-radius:6px;background:#fff;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+.note{font-size:14px;color:var(--mute);margin:0}
+.careers{background:var(--navy);color:#fff}
+.careers h2,.careers h3{color:#fff}
+.careers .sec-head p{color:#dbe4f7}
+.perks{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px;padding:0}
+.perks li{list-style:none;border:1px solid #4a63a0;border-radius:99px;padding:8px 18px;font-weight:500}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:36px}
+.cols h3{font-size:24px;margin-bottom:10px}
+.cols ul{margin:0;padding-left:20px;color:#dbe4f7}
+.cols li{margin-bottom:6px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact h3{font-size:30px;margin-bottom:4px}
+.contact p{margin:4px 0}
+.contact .big{font-size:26px;font-weight:600;font-family:'Barlow Semi Condensed',Arial,sans-serif}
+footer{background:#081a3f;color:#c3cde4;padding:28px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){
+ .hero .wrap,.two,.contact{grid-template-columns:1fr;gap:36px}
+ .svc,.cols{grid-template-columns:1fr 1fr}
+ section{padding:60px 0}
+ .hero{padding:56px 0 96px}
+}
+@media(max-width:620px){
+ body{font-size:16px}
+ .bar{flex-direction:column;align-items:flex-start;gap:0;padding:8px 0}
+ nav ul{justify-content:flex-start;gap:6px 16px;padding-bottom:8px}
+ .svc,.cols,.docs,form{grid-template-columns:1fr}
+ form{padding:22px}
+}
+</style>
 </head>
-
 <body>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#top" aria-label="Northforce Logistics Inc. home"><img src="northforce-logo.png" alt="Northforce Logistics Inc."></a>
+<nav aria-label="Main">
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="carrier-profile.html">Carrier profile</a></li>
+<li><a href="#documents">Documents</a></li>
+<li><a href="#quote">Get a quote</a></li>
+<li><a href="#careers">Careers</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
 
-    <nav class="navbar">
+<main id="top">
+<div class="hero">
+<div class="wrap">
+<div>
+<h1>Your reach, across the north.</h1>
+<p class="lead">Reliable freight transportation across Canada and the United States for brokers, shippers and logistics partners. Safety-focused, fully insured and cross-border capable.</p>
+<div class="cta">
+<a class="btn main" href="#quote">Get a quote</a>
+<a class="btn ghost" href="#contact">Contact dispatch</a>
+</div>
+</div>
+<aside class="facts" aria-labelledby="cp">
+<h2 id="cp">Carrier profile</h2>
+<dl>
+<div><dt>NSC number</dt><dd>SK0201972</dd></div>
+<div><dt>IFTA licence</dt><dd>SK119080026</dd></div>
+<div><dt>Safety rating</dt><dd>Satisfactory Unaudited</dd></div>
+<div><dt>Based in</dt><dd>Regina, Saskatchewan</dd></div>
+</dl>
+<a href="carrier-profile.html">View full carrier profile</a>
+</aside>
+</div>
+</div>
 
-        <div class="nav-brand">
-            Northforce Logistics Inc.
-        </div>
-
-        <div class="nav-menu">
-            <a href="carrier-profile.html">Carrier Profile</a>
-            <a href="#services">Services</a>
-            <a href="#safety">Safety</a>
-            <a href="#careers">Careers</a>
-            <a href="#documents">Documents</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-    </nav>
-
-    <header>
-
-        <img src="northforce-logo.png"
-             alt="Northforce Logistics Logo"
-             class="logo">
-
-        <h1>Your Reach, Across The North</h1>
-
-        <p class="company-name">
-            NORTHFORCE LOGISTICS INC.
-        </p>
-
-        <p class="hero-text">
-            Reliable freight transportation across Canada and the United States.
-            Safety-focused. Fully insured. Cross-border capable.
-        </p>
-
-        <a href="#contact" class="hero-button">
-            Contact Dispatch
-        </a>
-
-        <a href="mailto:dispatch@northforcelogistic.com?subject=Quote Request"
-           class="hero-button">
-            Request A Quote
-        </a>
-<a href="carrier-profile.html"
-   class="hero-button">
-   View Carrier Profile
-</a>
-    </header>
-
-    <section>
-
-        <div class="card">
-
-            <h2>Why Choose Northforce</h2>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    Safety Certified
-                </div>
-
-                <div class="service-card">
-                    Fully Insured
-                </div>
-
-                <div class="service-card">
-                    Cross-Border Capable
-                </div>
-
-                <div class="service-card">
-                    Compliance First
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-<section id="documents">
-
-    <div class="card">
-
-        <h2>Supporting Documentation</h2>
-
-        <p>
-            Supporting compliance and onboarding documentation
-            is available upon request for brokers, shippers,
-            and logistics partners.
-        </p>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                Safety Fitness Certificate
-            </div>
-
-            <div class="service-card">
-                Certificate of Liability Insurance
-            </div>
-
-            <div class="service-card">
-                WCB Clearance Letter
-            </div>
-
-            <div class="service-card">
-                IFTA Licence
-            </div>
-
-            <div class="service-card">
-                Apportioned Cab Card
-            </div>
-
-            <div class="service-card">
-                Corporate Registration Documents
-            </div>
-
-        </div>
-
-        <br>
-
-        <p>
-            For onboarding or qualification requests, please contact dispatch.
-        </p>
-
-        <a href="mailto:dispatch@northforcelogistic.com?subject=Broker Documentation Request"
-           class="hero-button">
-            Request Documentation
-        </a>
-
-    </div>
-
+<section id="services">
+<div class="wrap">
+<div class="sec-head">
+<h2>Freight services</h2>
+<p>Our focus is safety, compliance, clear communication and reliable execution from pickup through delivery.</p>
+</div>
+<ul class="svc">
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><div><strong>Full truckload (FTL)</strong><span>Dedicated trailer capacity for your freight, door to door.</span></div></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v8l9 4 9-4V8"/><path d="M12 12v8"/></svg><div><strong>Less than truckload (LTL)</strong><span>Right-sized shipments without paying for a full trailer.</span></div></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg><div><strong>Hot shot service</strong><span>Time-sensitive loads that need to move fast.</span></div></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><div><strong>Cross-border freight</strong><span>Canada and United States lanes with compliance handled.</span></div></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h7a3 3 0 000-6H9a3 3 0 010-6h7"/></svg><div><strong>Long-haul transportation</strong><span>Consistent coverage across the Prairies and beyond.</span></div></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><strong>Dedicated solutions</strong><span>Capacity built around your recurring lanes.</span></div></li>
+</ul>
+</div>
 </section>
-    <section>
 
-        <div class="card">
-
-            <h2>About Northforce Logistics</h2>
-
-            <p>
-                Northforce Logistics provides freight transportation services
-                across Canada and the United States for brokers, shippers and
-                logistics partners.
-            </p>
-
-            <p>
-                Our focus is safety, compliance, clear communication,
-                and reliable execution from pickup through delivery.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section id="services">
-
-        <div class="card">
-
-            <h2>Transportation Services</h2>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    FTL Transportation
-                </div>
-
-                <div class="service-card">
-                    LTL Service
-                </div>
-
-                <div class="service-card">
-                    Hot Shot Service
-                </div>
-
-                <div class="service-card">
-                    Cross-Border Freight
-                </div>
-
-                <div class="service-card">
-                    Long-Haul Transportation
-                </div>
-
-                <div class="service-card">
-                    Dedicated Solutions
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="safety">
-
-        <div class="card">
-
-            <h2>Carrier Profile</h2>
-
-            <div class="services-grid">
-
-                <div class="service-card">
-                    NSC Number<br>
-                    SK0201972
-                </div>
-
-                <div class="service-card">
-                    IFTA Licence<br>
-                    SK119080026
-                </div>
-
-                <div class="service-card">
-                    Safety Rating<br>
-                    Satisfactory Unaudited
-                </div>
-
-                <div class="service-card">
-                    Regina, Saskatchewan
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-<section id="careers">
-
-    <div class="card">
-
-        <h2>We're Hiring Class 1 Drivers</h2>
-
-        <p>
-            Northforce Logistics Inc. is currently seeking professional,
-            safety-focused Class 1 Drivers to join our growing team.
-            We offer consistent miles, competitive compensation, and
-            Canada-wide transportation opportunities.
-        </p>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                📍 Canada-Wide & Prairie Region Routes
-            </div>
-
-            <div class="service-card">
-                🚛 Dry Freight Hauling
-            </div>
-
-            <div class="service-card">
-                📅 Weekends Off
-            </div>
-
-            <div class="service-card">
-                💰 Competitive Pay Package
-            </div>
-
-        </div>
-
-        <br>
-
-        <h3>Requirements</h3>
-
-        <ul>
-            <li>Valid Class 1 Driver's License</li>
-            <li>Minimum 6 months to 1 year driving experience</li>
-            <li>Clean Driver Abstract</li>
-            <li>Dry Van experience is considered an asset</li>
-        </ul>
-
-        <br>
-
-        <h3>Documents Required</h3>
-
-        <ul>
-            <li>Commercial Driver's License (Class 1)</li>
-            <li>Commercial Driver Abstract (dated within 30 days)</li>
-            <li>Updated Resume and Work History</li>
-        </ul>
-
-        <br>
-
-        <h3>Locations</h3>
-
-        <p>
-            Regina, Saskatchewan • Calgary, Alberta • Edmonton, Alberta
-        </p>
-
-        <br>
-
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeri3Dq4YtZ2nEqMtVgoCWJB6hXTWUC-5_d9FeXUV643zS6KA/viewform?usp=publish-editor"
-   target="_blank"
-   class="hero-button">
-   Apply Now
-</a>
-
-    </div>
-
+<section id="documents" class="alt">
+<div class="wrap two">
+<div>
+<div class="sec-head">
+<h2>Onboarding documents</h2>
+<p>Compliance and onboarding documents are available for brokers, shippers and logistics partners.</p>
+</div>
+<ul class="docs">
+<li>Safety Fitness Certificate</li>
+<li>Certificate of Liability Insurance</li>
+<li>WCB Clearance Letter</li>
+<li>IFTA Licence</li>
+<li>Apportioned Cab Card</li>
+<li>Corporate Registration Documents</li>
+</ul>
+<a class="btn dark" href="mailto:dispatch@northforcelogistic.com?subject=Documentation%20request&amp;body=Company%20name%3A%0AContact%20name%3A%0ADocuments%20needed%3A">Request documentation</a>
+</div>
+<div id="quote">
+<div class="sec-head">
+<h2>Get a quote</h2>
+<p>Tell us about the load and dispatch will reply with a rate and availability.</p>
+</div>
+<form id="qf">
+<div><label for="n">Your name</label><input id="n" required autocomplete="name"></div>
+<div><label for="c">Company</label><input id="c" autocomplete="organization"></div>
+<div class="full"><label for="p">Phone or email</label><input id="p" required autocomplete="email"></div>
+<div><label for="pu">Pickup city</label><input id="pu" required></div>
+<div><label for="de">Delivery city</label><input id="de" required></div>
+<div class="full"><label for="t">Service</label>
+<select id="t"><option>Full truckload (FTL)</option><option>Less than truckload (LTL)</option><option>Hot shot</option><option>Cross-border</option><option>Long-haul</option><option>Dedicated</option><option>Not sure</option></select></div>
+<div class="full"><label for="d">Freight details</label><textarea id="d" placeholder="Commodity, weight, pickup date, special requirements"></textarea></div>
+<div class="full"><button class="btn main" type="submit">Send quote request</button>
+<p class="note" style="margin-top:10px">This opens your email app with the details filled in, addressed to dispatch.</p></div>
+</form>
+</div>
+</div>
 </section>
-    <section id="contact">
 
-        <div class="card">
+<section id="careers" class="careers">
+<div class="wrap">
+<div class="sec-head">
+<h2>Now hiring Class 1 drivers</h2>
+<p>We are seeking professional, safety-focused Class 1 drivers to join our growing team, with consistent miles and Canada-wide opportunities.</p>
+</div>
+<ul class="perks">
+<li>Canada-wide and Prairie routes</li>
+<li>Dry freight hauling</li>
+<li>Weekends off</li>
+<li>Competitive pay package</li>
+</ul>
+<div class="cols">
+<div><h3>Requirements</h3><ul><li>Valid Class 1 driver's licence</li><li>6 months to 1 year of driving experience</li><li>Clean driver abstract</li><li>Dry van experience is an asset</li></ul></div>
+<div><h3>Documents to send</h3><ul><li>Commercial driver's licence (Class 1)</li><li>Commercial driver abstract, dated within 30 days</li><li>Updated resume and work history</li></ul></div>
+<div><h3>Locations</h3><ul><li>Regina, Saskatchewan</li><li>Calgary, Alberta</li><li>Edmonton, Alberta</li></ul></div>
+</div>
+<a class="btn main" href="https://docs.google.com/forms/d/e/1FAIpQLSeri3Dq4YtZ2nEqMtVgoCWJB6hXTWUC-5_d9FeXUV643zS6KA/viewform?usp=publish-editor">Apply now</a>
+</div>
+</section>
 
-            <h2>Contact Dispatch</h2>
+<section id="contact">
+<div class="wrap contact">
+<div>
+<h2 style="font-size:clamp(32px,4.4vw,46px);margin-bottom:12px">Talk to dispatch</h2>
+<p style="color:var(--mute);font-size:19px;margin:0">For loads, onboarding or carrier questions, reach out directly.</p>
+</div>
+<div>
+<h3>Garry</h3>
+<p>Dispatch</p>
+<p class="big"><a href="tel:+13065414573">306-541-4573</a></p>
+<p><a href="mailto:dispatch@northforcelogistic.com">dispatch@northforcelogistic.com</a></p>
+<p style="color:var(--mute)">A-2231 Lindsay St, Regina, SK&nbsp; S4N 3C2</p>
+</div>
+</div>
+</section>
+</main>
 
-            <p><strong>Garry</strong></p>
+<footer>
+<div class="wrap"><span>Northforce Logistics Inc. | Regina, Saskatchewan, Canada</span><span>Your reach, across the north</span></div>
+</footer>
 
-            <p>Phone: 306-541-4573</p>
-
-            <p>
-                Email:
-                <a href="mailto:dispatch@northforcelogistic.com">
-                    dispatch@northforcelogistic.com
-                </a>
-            </p>
-
-            <a href="mailto:dispatch@northforcelogistic.com"
-               class="hero-button">
-                Email Dispatch
-            </a>
-
-        </div>
-
-    </section>
-
-    <footer>
-        Northforce Logistics Inc. | Regina, Saskatchewan, Canada
-    </footer>
-
+<script>
+document.getElementById('qf').addEventListener('submit',function(e){
+e.preventDefault();
+var v=function(i){return document.getElementById(i).value.trim()};
+var body=['Name: '+v('n'),'Company: '+v('c'),'Phone/email: '+v('p'),'Pickup: '+v('pu'),'Delivery: '+v('de'),'Service: '+v('t'),'','Freight details:',v('d')].join('\n');
+location.href='mailto:dispatch@northforcelogistic.com?subject='+encodeURIComponent('Quote request: '+v('pu')+' to '+v('de'))+'&body='+encodeURIComponent(body);
+});
+</script>
 </body>
-
 </html>
