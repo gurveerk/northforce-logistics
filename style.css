@@ -9,7 +9,7 @@ a{color:var(--navy2)}
 header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
 .logo{display:block;flex:none;padding:8px 0}
-.logo img{height:64px;width:auto;display:block}
+.logo img{height:72px;width:auto;display:block}
 nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap;justify-content:flex-end}
 nav a{text-decoration:none;color:var(--ink);font-weight:500;font-size:16px}
 nav a:hover{color:var(--navy2);text-decoration:underline}
